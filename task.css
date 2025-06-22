@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+body {
+  margin: 0;
+  padding: 20px;
+  font-family: 'Inter', sans-serif;
+  background: #f7f9fc;
+  color: #333;
+}
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+.add-task {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.add-task input, .add-task select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+}
+.add-task button {
+  padding: 10px 16px;
+  background: #0052cc;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.add-task button:hover {
+  background: #003d99;
+}
+.board {
+  display: flex;
+  gap: 20px;
+}
+.column {
+  background: #fff;
+  border-radius: 10px;
+  padding: 16px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  max-height: 80vh;
+  overflow-y: auto;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: background 0.2s;
+}
+.column h2 {
+  text-align: center;
+  margin: 0 0 12px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #0052cc;
+}
+.column.dragover {
+  background: #e1eaff;
+}
+.card {
+  position: relative;
+  background: #fff;
+  margin: 8px 0;
+  padding: 12px 40px 12px 12px;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  cursor: move;
+  user-select: none;
+  transition: transform 0.1s, box-shadow 0.2s;
+  font-size: 0.95rem;
+}
+.card:hover {
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+.card:active {
+  transform: scale(1.02);
+}
+.delete-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: transparent;
+  border: none;
+  font-size: 16px;
+  color: #888;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+.delete-btn:hover {
+  color: #e74c3c;
+}
